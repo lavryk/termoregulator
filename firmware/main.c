@@ -19,7 +19,9 @@ int main(void) {
     if(search_flag == SEARCH_SENSORS) {
       num_devices = 0;
       crc_flag    = ow_search_devices(all_devices, MAX_DEVICES, BUS, &num_devices);
-      if((num_devices == MAX_DEVICES) && (crc_flag != SEARCH_CRC_ERROR)) {
+      if(crc_flag == SEARCH_CRC_ERROR) {
+        print_err(ERR0, num_devices);
+      } else if(num_devices == MAX_DEVICES) {
         search_flag = SENSORS_FOUND;
       }
     }
@@ -27,14 +29,13 @@ int main(void) {
     uint8_t index;
     for(index = 0; index < MAX_DEVICES; index++) {
       crc_flag = ds18b20_read_temperature(BUS, all_devices[index].id, &temperature);
-      if(crc_flag != READ_CRC_ERROR) {
-        print_num(temperature, index);
-//        print_err(ERR[0], index);
-        _delay_us(500);
+      if(crc_flag == READ_CRC_ERROR) {
+        print_err(ERR1, index);
       } else {
-        print_err(0, index);
+        print_num(temperature, index);
         search_flag = SEARCH_SENSORS;
       }
+      _delay_us(500);
     }
 
     _delay_ms(500);

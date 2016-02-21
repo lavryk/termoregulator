@@ -18,10 +18,12 @@
 #define SH_CP_low() SH_CP_PORT&=~_BV(SH_CP_PIN)
 #define SH_CP_high() SH_CP_PORT|=_BV(SH_CP_PIN)
 
-static const uint16_t ERR[] PROGMEM = {
-  0b0110000100000011, // ERR0
-  0b0110000110011111  // ERR1
-};
+#define ERR0 0b0110000100000011
+#define ERR1 0b0110000110011111
+#define ERR2 0b0110000100100101
+#define ERR3 0b0110000100001101
+
+#define MINUS 0b11111101
 
 static const uint8_t DIGITS[] PROGMEM = {
   0b00000011, // 0
@@ -37,7 +39,7 @@ static const uint8_t DIGITS[] PROGMEM = {
 };
 
 void init_led();
-void print_num(uint8_t number, uint8_t index);
+void print_num(char number, uint8_t index);
 void print_err(uint16_t code, uint8_t index);
 void print_with_index(uint16_t code, uint8_t index);
 void print_bits(uint16_t number);

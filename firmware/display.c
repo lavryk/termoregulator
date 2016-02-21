@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "display.h"
 
 void init_led() {
@@ -5,13 +6,32 @@ void init_led() {
   PORTC |= 0b00000000;
 }
 
-void print_num(uint8_t number, uint8_t index) {
-  uint16_t code = ((pgm_read_byte(&DIGITS[number / 10]) << 8) | pgm_read_byte(&DIGITS[number % 10]));
-  print_with_index(code, index);
+void print_num(char number, uint8_t index) {
+  if(number > 99) {
+    print_err(ERR2, index);
+    return;
+  }
+
+  if(number < -9) {
+    print_err(ERR3, index);
+    return;
+  }
+
+  uint8_t num0;
+  uint8_t num1;
+  if(number < 0) {
+    num0 = pgm_read_byte(&DIGITS[abs(number) % 10]);
+    num1 = MINUS;
+  } else {
+    num0 = pgm_read_byte(&DIGITS[number % 10]);
+    num1 = pgm_read_byte(&DIGITS[number / 10]);
+  }
+
+  print_with_index(((num1 << 8) | num0), index);
 }
 
 void print_err(uint16_t code, uint8_t index) {
-  print_with_index(pgm_read_byte(&ERR[code]), index);
+  print_with_index(code, index);
 }
 
 void print_with_index(uint16_t code, uint8_t index) {
