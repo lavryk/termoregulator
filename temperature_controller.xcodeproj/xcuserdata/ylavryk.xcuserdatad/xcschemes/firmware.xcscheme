@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "407952600CEA391500E202DC"
+               BuildableName = "firmware"
+               BlueprintName = "firmware"
+               ReferencedContainer = "container:temperature_controller.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release">
+      <PathRunnable
+         FilePath = "/Users/ylavryk/projects/deploy_avr.sh">
+      </PathRunnable>
+   </LaunchAction>
+</Scheme>
