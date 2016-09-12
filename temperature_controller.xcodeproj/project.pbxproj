@@ -10,11 +10,18 @@
 		4079525E0CEA38CC00E202DC /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4079525F0CEA38CC00E202DC /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		BEABA0BADFF97630E4645873 /* ow_bit_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ow_bit_functions.h; sourceTree = "<group>"; };
+		BEABA15F6459E09D094F81A8 /* micro_menu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = micro_menu.c; sourceTree = "<group>"; };
 		BEABA2965B8F25018630FDEB /* ds18b20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ds18b20.h; sourceTree = "<group>"; };
 		BEABA381BEACACDC91013B41 /* ow_rom_functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ow_rom_functions.c; sourceTree = "<group>"; };
+		BEABA517F0374E3F7A13DF05 /* menu_setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_setup.h; sourceTree = "<group>"; };
+		BEABA6A343142CFBA373C1EA /* menu_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_config.h; sourceTree = "<group>"; };
 		BEABA83836878F22FB4ACF57 /* ow_bit_functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ow_bit_functions.c; sourceTree = "<group>"; };
+		BEABA8E894833B9EA2F6BBC1 /* relay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = relay.c; sourceTree = "<group>"; };
 		BEABA922F7BE4769A181BDC9 /* ow_rom_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ow_rom_functions.h; sourceTree = "<group>"; };
 		BEABA9A1EC7F24A4D6A327B4 /* display.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = display.c; sourceTree = "<group>"; };
+		BEABAA4186F839BF5092F102 /* menu_setup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = menu_setup.c; sourceTree = "<group>"; };
+		BEABAB1DA07A4CA61B3B864B /* relay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = relay.h; sourceTree = "<group>"; };
+		BEABAB4BA48118CA8338286B /* micro_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = micro_menu.h; sourceTree = "<group>"; };
 		BEABAE26CAD9FCE4630C8998 /* ds18b20.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ds18b20.c; sourceTree = "<group>"; };
 		BEABAE26DD342516419944B8 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = display.h; sourceTree = "<group>"; };
 		BEABAF4C1C08C0556C9B8DE0 /* ow_crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ow_crc.c; sourceTree = "<group>"; };
@@ -45,6 +52,13 @@
 				BEABAF4C1C08C0556C9B8DE0 /* ow_crc.c */,
 				BEABAF790A2734B8D746C821 /* ow_crc.h */,
 				BEABA0BADFF97630E4645873 /* ow_bit_functions.h */,
+				BEABA15F6459E09D094F81A8 /* micro_menu.c */,
+				BEABAB4BA48118CA8338286B /* micro_menu.h */,
+				BEABA6A343142CFBA373C1EA /* menu_config.h */,
+				BEABA517F0374E3F7A13DF05 /* menu_setup.h */,
+				BEABAA4186F839BF5092F102 /* menu_setup.c */,
+				BEABAB1DA07A4CA61B3B864B /* relay.h */,
+				BEABA8E894833B9EA2F6BBC1 /* relay.c */,
 			);
 			path = firmware;
 			sourceTree = "<group>";

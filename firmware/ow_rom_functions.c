@@ -28,21 +28,6 @@ uint8_t ow_receive_byte(uint8_t pin) {
   return data;
 }
 
-void ow_skip_rom(uint8_t pin) {
-  ow_send_byte(OW_ROM_SKIP, pin);
-}
-
-void ow_read_rom(uint8_t *rom_value, uint8_t pin) {
-  uint8_t bytes_left = 8;
-
-  ow_send_byte(OW_ROM_READ, pin);
-
-  while(bytes_left > 0) {
-    *rom_value++ = ow_receive_byte(pin);
-    bytes_left--;
-  }
-}
-
 void ow_match_rom(uint8_t *rom_value, uint8_t pin) {
   uint8_t bytes_left = 8;
 

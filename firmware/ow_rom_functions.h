@@ -32,8 +32,8 @@ typedef struct {
 
 void    ow_send_byte(uint8_t data, uint8_t pin);
 uint8_t ow_receive_byte(uint8_t pin);
-void    ow_skip_rom(uint8_t pin);
-void    ow_read_rom(uint8_t *rom_value, uint8_t pin);
+//void    ow_skip_rom(uint8_t pin);
+//void    ow_read_rom(uint8_t *rom_value, uint8_t pin);
 void    ow_match_rom(uint8_t *rom_value, uint8_t pin);
 uint8_t ow_search_rom(uint8_t *bit_pattern, uint8_t last_deviation, uint8_t pins);
 uint8_t ow_search_devices(OW_device *devices, uint8_t num_devices, uint8_t pin, uint8_t *num);

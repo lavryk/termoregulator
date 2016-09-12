@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "display.h"
 
-void init_led() {
+void initLED() {
   DDRC |= _BV(DS_PIN) | _BV(ST_CP_PIN) | _BV(SH_CP_PIN);
-  PORTC |= 0b00000000;
+  PORTC |= 0x0;
 }
 
-void print_num(char number, uint8_t index) {
+void print_num(int16_t number, uint8_t index) {
   if(number > 99) {
     print_err(ERR2, index);
     return;
@@ -28,10 +28,6 @@ void print_num(char number, uint8_t index) {
   }
 
   print_with_index(((num1 << 8) | num0), index);
-}
-
-void print_err(uint16_t code, uint8_t index) {
-  print_with_index(code, index);
 }
 
 void print_with_index(uint16_t code, uint8_t index) {

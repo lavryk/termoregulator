@@ -24,6 +24,10 @@
 
 OW_device all_devices[MAX_DEVICES];
 
-uint8_t ds18b20_read_temperature(uint8_t bus, uint8_t *id, uint32_t *temperature);
+void initDS18B20();
+
+uint8_t ds18b20_read_temperature(uint8_t index, int32_t *temperature);
+
+uint8_t ds18b20_search_devices();
 
 #endif
