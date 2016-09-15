@@ -41,7 +41,6 @@
 			children = (
 				4079525F0CEA38CC00E202DC /* Makefile */,
 				4079525E0CEA38CC00E202DC /* main.c */,
-				BEABA19372100E5B5510E329 /* one_wire */,
 				BEABAE26DD342516419944B8 /* display.h */,
 				BEABA9A1EC7F24A4D6A327B4 /* display.c */,
 				BEABAE26CAD9FCE4630C8998 /* ds18b20.c */,
@@ -61,13 +60,6 @@
 				BEABA8E894833B9EA2F6BBC1 /* relay.c */,
 			);
 			path = firmware;
-			sourceTree = "<group>";
-		};
-		BEABA19372100E5B5510E329 /* one_wire */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = one_wire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
