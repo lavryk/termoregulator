@@ -18,7 +18,7 @@
 # FUSES ........ Parameters for avrdude to flash the fuses appropriately.
 
 DEVICE     = atmega8
-CLOCK      = 16000000
+CLOCK      = 1000000
 PROGRAMMER = -c USBasp
 OBJECTS    = main.o ow_crc.o ds18b20.o ow_bit_functions.o ow_rom_functions.o display.o micro_menu.o relay.o
 
